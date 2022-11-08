@@ -34,16 +34,17 @@
         <input type="submit" value="Search" />
     </form>
 
-    <hr />
+<!--    <hr />-->
 
     <!-- TODO #4 - Loop over the search results to display all job fields. -->
-    <table class="search" th:each="job : ${jobs}" >
+    <table class="job-listing" th:each="job : ${jobs}" >
         <tr>
             <th:block th:each="column : ${columns}">
                 <th th:text = "${column.value}"></th>
+
             </th:block>
         </tr>
-        <th:block>
+<!--        <th:block>-->
         <tr>
             <th>Id</th>
             <td th:text="${job.id}"></td>
@@ -70,8 +71,10 @@
             <th>Core Competency</th>
             <td th:text="${job.coreCompetency}"></td>
         </tr>
-        </th:block>
+            <br>
+<!--        </th:block>-->
     </table>
+
 
 </div>
 
